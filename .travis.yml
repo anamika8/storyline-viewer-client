@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: ktxZqKqCGqM6XgmP5/GMzoDQ2R0TM8fyr5NVEwMUOFtQNpK0BEJ+uR9RK0nls+EJRN+soRxpP9yBRrVN3g9xodjrFeC8fSH00Wark9sWC5iQV1EK7ck07RMHhSAGtxw5f8vUmgWYPAjwSE01VPuhbXNVkR30w+228ZrM5DScgXu4/l/dMHFkLORO7V/Mn4tbv4pgexlsFgX0kQcYYEsBFE968HuGQ7JJ/WCrUBla2v3WzH8W5QmfdRPiBc8GL6iuHXf2WtAEVqtND+a10XSlAOhzMx6ON5t+/dz6y+F9xHXtEHs3pe/hLwsYbQF6GtQRQ+E/rXNTScnDYzu34w/DpIyVtBe9rzrrpc0Z1QqjCWJvpMfQ63xo5xWfHkGKXdPojaeRU/P2ZD/Ru6eX025ejtOrFsNE5Xq1INg0asBHFSJMDcZMVhmem5eNmckXpXeeLLgI2szAfv0y2TNEuNxLb1YIjJVoBnRRQxfjb5NXuegA+IxN/h1P6fVGPzj0xIb81UfupnJayNXHOUY08R0t7nDSetVKB00eX8/XMrstjzZVk7qjj2OrKggB4WEQVr03ZpyQvDO83X7HebQCdfIaJ6rvF7fuXpUV3hwPjbcbcwvR6dnJ9X7PDu5+wqnhNev3bS6KNYktq9m9OJWUeUeSXcHx2Nq5xG1YneeTnqB81tA=
+  app: storyline-viewer-client
+  on:
+    repo: anamika8/storyline-viewer-client
