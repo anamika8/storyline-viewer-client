@@ -12,7 +12,6 @@ export function LandingPage(props) {
 
   return (
     <div className="home">
-      <h2>Welcome to StoryLine Viewer App</h2>
       <LoginForm />
       <Link to="/register">Register</Link>
     </div>
