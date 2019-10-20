@@ -1,4 +1,7 @@
 import uuid from "uuid";
+import { API_BASE_URL } from "../config";
+import { normalizeResponseErrors } from "./utils";
+import { SubmissionError } from "redux-form";
 
 // ADD_STORY
 export const ADD_STORY = "ADD_STORY";
@@ -76,7 +79,7 @@ export const getAllStories = () => dispatch => {
   );
 };
 
-export const getStory = id => (dispatch, getState) => {
+export const getStoryById = id => (dispatch, getState) => {
   return (
     fetch(`${API_BASE_URL}/writings/${id}`, {
       method: "GET",
@@ -171,7 +174,7 @@ export const deleteStory = id => (dispatch, getState) => {
       // errors which follow a consistent format
       .then(res => normalizeResponseErrors(res))
       .then(res => res.json())
-      .then(data => dispatch(getAllStories())
+      .then(data => dispatch(getAllStories()))
       .catch(err => {
         const { reason, message, location } = err;
         if (reason === "ValidationError") {
