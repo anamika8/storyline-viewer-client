@@ -57,7 +57,7 @@ export const getAllStories = () => dispatch => {
         "Content-Type": "application/json"
       }
     })
-      // Reject any requests which don't return a 200 status, creating
+      // Reject any requests which don't return a 200, creating
       // errors which follow a consistent format
       .then(res => normalizeResponseErrors(res))
       .then(res => res.json())
