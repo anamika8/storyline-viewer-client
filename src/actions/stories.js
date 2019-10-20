@@ -35,12 +35,14 @@ export const editStory = (id, updates) => ({
   updates
 });
 
+// Get all stories
 export const GET_STORIES = "GET_STORIES";
 export const getStories = stories => ({
   type: "GET_STORIES",
   stories
 });
 
+// Get one story
 export const GET_STORY = "GET_STORY";
 export const getStory = story => ({
   type: "GET_STORY",
@@ -157,7 +159,7 @@ export const updateStory = (values, id) => (dispatch, getState) => {
   );
 };
 
-export const updateStory = id => (dispatch, getState) => {
+export const deleteStory = id => (dispatch, getState) => {
   return (
     fetch(`${API_BASE_URL}/writings/${id}`, {
       method: "DELETE",
