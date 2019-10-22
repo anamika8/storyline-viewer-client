@@ -53,6 +53,7 @@ export const getStory = story => ({
 });
 
 export const getAllStories = () => dispatch => {
+  console.log("Inside getAllStories()");
   return (
     fetch(`${API_BASE_URL}/writings`, {
       method: "GET",
